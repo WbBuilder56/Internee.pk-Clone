@@ -2,4 +2,216 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 1rem /* Same as navbar height */
+}
+.hero-section{
+    margin-top: 8rem;
+}
+
+.navbar{
+ position: fixed;
+ width: 100%;
+ background-color: #ffffff !important;
+ top: 0;
+ left: 0;
+ padding: 15px 20px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.navbar__list{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0 2rem;
+}
+#img__logo{
+    height: 2.5rem;
+    width: auto;
+    margin-right: 2rem;
+    transform: scale3d(1.1, 1.1, 1.1);
+    transition: all 0.3s ease;
+}
+#img__logo:hover{
+    transform:scale(1.2);
+    transition: all 0.3s ease;
+}
+.navbar__item a{
+    display: flex;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+}
+.navbar__item a:hover{
+    color: #27a727;
+    font-size: 1.1rem;
+}
+#navbtn{
+    display: flex;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    border: 2px dashed rgb(15, 167, 15);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color:rgb(30, 134, 30);
+    background-color: white;
+    
+}
+#navbtn:hover{
+    background-color: rgb(11, 156, 11);
+    color: white;
+    transition: all 0.5s ease;
+}
+.hero-content{
+    display: flex;
+    justify-content: space-around;
+    margin: 0rem 5rem;
+}
+.hero-text{
+    width: 40%;
+}
+.hero-text{
+    opacity: 0;                      /* Initially hidden */
+    transform: translateX(-100%);    /* Start off-screen to the left */
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-text h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: white 1px 1px;
+    color: rgb(34, 33, 33);
+    margin-bottom: 0.5rem;
+    color: #0c6b0c;
+}
+.hero-text p{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: rgb(99, 94, 94);
+    font-weight: 500;
+    line-height: 2rem;
+    text-shadow: #e0e6e0 .5px .5px;
+}
+.hero-text p:hover{
+    color: #0c6b0c;
+    transition: all 1s ease;
+
+}
+.hero-logos{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+.hero-logos img{
+    width: 12%;
+    height: 100%;
+}
+/* Container for the buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+/* Button styling */
+.hero-buttons button {
+    border-radius: 2rem;
+    width: 10rem;
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Active button style */
+.btn-active {
+    background-color: rgb(15, 167, 15);
+    color: white;
+    border: 2px solid rgb(15, 167, 15);
+}
+
+/* Outline button style */
+.btn-outline {
+    background-color: white;
+    color: rgb(15, 167, 15);
+    border: 2px solid rgb(15, 167, 15);
+}
+
+/* Hover effects */
+.btn-active:hover, .btn-outline:hover {
+    background-color: rgb(11, 156, 11);
+    color: white;
+    border-color: rgb(11, 156, 11);
+}
+
+/* Text below buttons */
+.hero-buttons p {
+    font-size: 0.75rem;
+    color: rgb(122, 119, 119);
+    font-weight: 550;
+    text-align: center;
+
+}
+
+.hero-image img{
+    height: 450px;
+    width: 450px;
+    overflow: hidden;
+    border-radius: 1rem;
+    object-fit: cover;
+    height: auto;
+    border: #27a727 1px solid;
+}
+.trusted-head{
+    text-align: center;
+    margin: 2rem 0 0 0;
+    font-size: 2.8rem;
+    color: rgba(2, 2, 31, 0.781);
+}
+.trusted-logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:0 1rem;
+    overflow-y: hidden;
+
+}
+.trusted-logos img{
+    width: 8%;
+    height: auto;
+}
+.trusted-logos img:hover{
+    transform: scale(1.5);
+    transition: all 0.3s ease-in;
+}
+.trusted-logos img:nth-child(1),
+.trusted-logos img:nth-child(7){
+    width: 15%;
+    height: auto;
 }
