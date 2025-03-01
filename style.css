@@ -223,13 +223,13 @@ body {
     width: 15%;
     height: auto;
 }
-.internships h2{
+#internships h2{
     text-align: center;
     margin: 0 0 3rem 0;
     font-size: 2.8rem;
     color: rgba(2, 2, 31, 0.781);
 }
-.internships h2:hover{
+#internships h2:hover{
     color: #0c6b0c;
     transition: all 0.5s ease;
 }
@@ -713,6 +713,7 @@ body {
     .paragrp strong{
         font-size: 0.9rem;
     }
+
     #fotlogo{
         width: 60%;
     }
@@ -775,5 +776,120 @@ body {
     #headdesc{
         font-size: 1rem;
     }
+    .content h1{
+        font-size: 1.8rem;
+    }
+    .footer-container h4{
+        font-size: 0.9rem;
+    }
+    .footer-container a{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:840px) {
+    .navbar__item a{
+        font-size: 0.75rem;
+    }
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-text{
+        width: 90%;
+    }
+    .hero-logos{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-logos img{
+    width:10%;
+    height: auto;
+    }
+    .hero-buttons{
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-image img{
+        width: 500px;
+        height: 500px;
+    }
 
+    .reviewcon{
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+
+    .review-card p{
+        font-size: 0.9rem !important;
+    }
+    .review-card:hover{
+        transform: scale(1.02);
+        box-shadow: 5px 5px 5px rgba(7, 224, 73, 0.3);
+        border: #055805 1px solid;
+        transition: all 0.3s ease;
+        h3,strong{
+            color: #17b324d7;
+            transition: all 0.5s ease;
+        }
+        p{
+            font-weight: 550;
+        }
+
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width:768px) {
+    .hero-content{
+        margin-top: 6rem;
+    }
+    .navbar__list{
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .navbar{
+        height:40%;
+        overflow: hidden;
+    }
+    #navbtn{
+        padding: 0.5rem 1rem;
+    }
+    /* Hide the navbar list initially on small screens */
+.navbar__list {
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 1rem;
+    gap: 5px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* Show the list when the 'show' class is added */
+.navbar__list.show {
+    display: flex;
+    width: 80%;
+}
+
+    
 }

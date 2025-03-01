@@ -9,14 +9,16 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul class="navbar__list">
+      <button class="hamburger" id="hamburger-btn">
+        ☰
+    </button>
+        <ul class="navbar__list" id="list">
           <img id="img__logo" src="./Images/logo/logo-DKUUqbKl.png" alt="weblogo">
           <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
-          <li class="navbar__item"><a href="index.html" class="navbar__link">Internship</a></li>
-          <li class="navbar__item"><a href="index.html" class="navbar__link">Graduate Programs</a></li>
-          <li class="navbar__item"><a href="index.html" class="navbar__link">Company Collaboration</a></li>
-          <li class="navbar__item"><a href="index.html" class="navbar__link">Contact</a></li>
-          <li class="navbar__item"><a href="index.html" class="navbar__link">Job Portal</a></li>
+          <li class="navbar__item"><a href="#internships" class="navbar__link">Internship</a></li>
+          <li class="navbar__item"><a href="#" id="graduate-program">Graduate Programs</a></li>
+          <li class="navbar__item"><a href="#footer" class="navbar__link">Contact</a></li>
+          <li class="navbar__item"><a href="#" id="job-portal">Job Portal</a></li>
           <li class="navbar__item"><button id="navbtn">Login</button></li>
         </ul>
       </nav>
@@ -71,8 +73,8 @@
           <img src="Images/logo/Pafla.png" alt="Company 7">
         </div>
       </section>
-      <section class="internships">
-        <h2>Explore Our Internships</h2>
+      <section id="internships">
+        <h2 >Explore Our Internships</h2>
         
         <div class="card-container">
           <div class="card">
@@ -239,7 +241,7 @@
         </div>
       </section>
       <!-- Footer Section -->
-<footer class="footer">
+<footer id="footer">
     <div class="footer-container">
       <div class="footer-logo">
         <img id="fotlogo" src="Images/logo/logo-DKUUqbKl.png" alt="Internee.pk Logo" >
