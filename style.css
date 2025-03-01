@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 1rem /* Same as navbar height */
+    padding-top: 1rem;/* Same as navbar height */
 }
 .hero-section{
     margin-top: 8rem;
@@ -43,34 +43,34 @@ body {
     transition: all 0.3s ease;
 }
 .navbar__item a{
+    width: 100%;
     display: flex;
-    margin: 0 0.5rem;
     text-decoration: none;
     color: black;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 550;
     transition: all 0.3s ease;
 
 }
 .navbar__item a:hover{
     color: #27a727;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 #navbtn{
     display: flex;
     padding: 0.8rem 2rem;
-    border-radius: 2rem;
-    border: 2px dashed rgb(15, 167, 15);
+    border-radius: 1rem;
+    border: 2px solid rgba(108, 233, 6, 0.788);
     font-weight: 600;
-    font-size: 1.1rem;
-    color:rgb(30, 134, 30);
-    background-color: white;
-    
+    font-size: 1rem;
+    color:rgb(244, 247, 244);
+    background-color: rgba(40, 182, 40, 0.863);
+    cursor: pointer;
 }
 #navbtn:hover{
-    background-color: rgb(11, 156, 11);
-    color: white;
-    transition: all 0.5s ease;
+    background-color: white;
+    color: #0db60d;
+    transition: all 0.3s ease;
 }
 .hero-content{
     display: flex;
@@ -79,11 +79,12 @@ body {
 }
 .hero-text{
     width: 40%;
+    margin-top: 1rem;
 }
 .hero-text{
     opacity: 0;                      /* Initially hidden */
     transform: translateX(-100%);    /* Start off-screen to the left */
-    animation: slideIn 1s ease-out forwards;
+    animation: slideIn 2s ease-out forwards;
 }
 
 @keyframes slideIn {
@@ -103,8 +104,8 @@ body {
     text-shadow: white 1px 1px;
     color: rgb(34, 33, 33);
     margin-bottom: 0.5rem;
-    color: #0c6b0c;
 }
+
 .hero-text p{
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
@@ -116,7 +117,10 @@ body {
 .hero-text p:hover{
     color: #0c6b0c;
     transition: all 1s ease;
-
+}
+.hero-text h1:hover{
+    color: #0c6b0c;
+    transition: all 0.5s ease;
 }
 .hero-logos{
     display: flex;
@@ -125,7 +129,7 @@ body {
     gap: 1.5rem;
 }
 .hero-logos img{
-    width: 12%;
+    width: 14%;
     height: 100%;
 }
 /* Container for the buttons */
@@ -183,7 +187,7 @@ body {
     height: 450px;
     width: 450px;
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: 0 2rem 2rem 0;
     object-fit: cover;
     height: auto;
     border: #27a727 1px solid;
@@ -193,6 +197,10 @@ body {
     margin: 2rem 0 0 0;
     font-size: 2.8rem;
     color: rgba(2, 2, 31, 0.781);
+}
+.trusted-head:hover{
+    color: #0c6b0c;
+    transition: all 0.5s ease;
 }
 .trusted-logos {
     display: flex;
@@ -207,11 +215,565 @@ body {
     height: auto;
 }
 .trusted-logos img:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: all 0.3s ease-in;
 }
 .trusted-logos img:nth-child(1),
 .trusted-logos img:nth-child(7){
     width: 15%;
     height: auto;
+}
+.internships h2{
+    text-align: center;
+    margin: 0 0 3rem 0;
+    font-size: 2.8rem;
+    color: rgba(2, 2, 31, 0.781);
+}
+.internships h2:hover{
+    color: #0c6b0c;
+    transition: all 0.5s ease;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 2rem 4rem;
+    padding: 1rem;
+
+}
+.card{
+    width: 90%;
+    min-height: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color:#fff;
+    border-radius:1rem 3rem 0rem 2rem;
+    box-shadow: 0 5px 5px rgba(20, 20, 20, 0.1) ;
+    position: relative;
+}
+.card:hover{
+    h3{
+        color: #057505;
+        transition: all 0.5s ease;
+        border-bottom: 1px solid #079c13;
+        border-width: 0.1rem;
+    }
+    button{
+        background-color: #13a113;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    transform: scale(1.05);
+    box-shadow: 0 5px 5px rgba(26, 24, 24, 0.3);
+    transition: all 0.3s ease;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+.card h3{
+    width: 100%;
+    font-size: 1.4rem;
+    color: #1d1f1d;
+    margin: 0.5rem 0;
+    height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.5rem;
+    color: #11a511;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin: 1rem;
+    border: 2px solid #13a113;
+}
+#student-reviews{
+    margin: 2rem 0;
+}
+#student-reviews h2 {
+    text-align: center;
+    margin: 2rem  1rem 0 0;
+    font-size: 2.5rem;
+    color: rgba(2, 2, 31, 0.781);
+}
+#student-reviews h2:hover{
+    color: #055805;
+    transition: all 0.5s ease;
+}
+#headdesc{
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    color: rgba(62, 138, 60, 0.897);
+}
+.review-card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 2rem;
+    padding: 1rem;
+    background-color:white;
+    border: 1px solid #e4f7e5;
+    box-shadow: 0 5px 5px rgba(20, 20, 20, 0.1) ;
+    border-radius: 0rem 2rem 0rem 0rem;
+    line-height: 2rem;
+}
+.reviewcon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem;
+}
+.review-card p{
+    color: rgba(13, 14, 13, 0.671);
+}
+.review-card:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px rgba(7, 224, 73, 0.3);
+    border: #055805 1px solid;
+    transition: all 0.3s ease;
+    h3,strong{
+        color: #17b324d7;
+        transition: all 0.5s ease;
+    }
+    p{
+        font-weight: 550;
+    }
+}
+.recent-blogs{
+    margin: 1rem 0;
+    background-color: rgb(243, 238, 238);
+
+}
+.recent-blogs h2{
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgba(10, 10, 10, 0.849);
+}
+.recent-blogs h2:hover{
+    color: #0c6b0c;
+    transition: all 0.5s ease;
+}
+.blog-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 1rem 3rem;
+    padding: 1rem;
+}
+.blog-card{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#fff;
+    border-radius: 0rem 2rem 0 0;
+    box-shadow: 5px 5px 5px rgba(78, 248, 121, 0.39) ;
+    position: relative;
+}
+.blog-card:hover{
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.blog-card img{
+    width: 100%;
+    height: 50%;
+    margin-bottom: .5rem;
+    border-radius: 0rem 1rem 0 0;
+    box-shadow: 1px 1px 1px rgba(132, 134, 132, 0.555) ;
+}
+.blog-card h3{
+    font-size: 1.5rem;
+    color: hsla(120, 3%, 12%, 0.95);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.blog-card h3:hover{
+    color: #0c6b0c;
+    transition: all 0.5s ease;
+}
+.blog-card p{
+    font-size: 1rem;
+    color: hsla(120, 2%, 35%, 0.95);
+    line-height: 1.5rem;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    text-shadow: rgb(218, 211, 211) 1px 1px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem;
+    padding: 1rem;
+}
+.image-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+.image-content:hover{
+    transform: scaleY(1.03);
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.text-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.text-content h1{
+    font-size: 2.5rem;
+    color: rgba(5, 1, 29, 0.849);
+}
+.text-content h1:hover{
+    color: #0c6b0c;
+    transition: all 0.5s ease;
+}
+#conpara{
+    font-size: 1rem;
+    color: rgba(90, 88, 88, 0.801);
+    line-height: 1.5rem;
+}
+.paragrp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    justify-content: center;
+    line-height: 1.5rem;
+    width: 80%;
+    margin-left: 10%;
+    color: rgba(60, 61, 59, 0.815);
+    font-size: 0.9rem;
+}
+.paragrp strong{
+    color: #0c6b0c;
+    font-size: 0.95rem;
+}
+.footer-container{
+    width: 100%;
+    height: auto;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    background-color: #f1f7f1d7;
+    padding: 3rem 3rem;
+}
+#fotlogo{
+    width: 60%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.footer-logo{
+    line-height: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+#fotpara{
+    font-size: 0.9rem;
+    color: rgba(100, 100, 102, 0.925);
+    margin-bottom: .5rem;
+}
+.contact a,
+.contact p{
+    color: rgba(16, 173, 37, 0.89) !important;
+    font-weight: 550;
+    margin-bottom: .5rem;
+}
+.social-icons{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+.social-icons img{
+    width: 40%;
+    height: 100%;
+    margin-top: 1rem;
+}
+.comcol,
+.helpcol,
+.emailcol{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.footer-container a{
+    text-decoration: none;
+    color: rgb(100, 99, 99);
+    font-size: .95rem;
+    font-weight: 550;
+}
+.footer-container a:hover{
+    color: #158f15;
+    transition: all 0.5s ease;
+}
+.emailcol input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    font-size:0.9rem;
+    font-weight: 540;
+    border: 2px dashed #0c6b0c;
+}
+.emailcol input:focus{
+    border: 2px solid #0c6b0c;
+    outline: none;
+
+}
+.emailcol button{
+    margin-top: 2rem;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fdfdfd;
+    color: #0c6b0c;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #39c70e;
+}
+.emailcol button:hover{
+    background-color: #12ac12;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f7f1d7;
+    color: rgba(38, 38, 39, 0.925);
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+}
+.footer-bottom strong{
+    color: rgb(66, 65, 65);
+}
+.footer-bottom a{
+    color:#1D4DE8;
+    font-weight: 550;
+    text-decoration: none;
+}
+@media (max-width:1080px) {
+    #img__logo{
+        height: 2rem;
+        width: auto;
+        margin-right: 1rem;
+    }
+    .navbar__list{
+        margin: 0 1rem;
+    }
+    .navbar__item a{
+        font-size: 0.85rem;
+    }
+    .navbar__item a:hover{
+        font-size: 1rem;
+    }
+    #navbtn{
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+    .hero-content{
+        margin: 0 1rem;
+    }
+    .hero-text{
+        width: 50%;
+    }
+    .hero-text h1{
+        font-size: 2.2rem;
+    }
+    .hero-text p{
+        font-size: 0.9rem;
+    }
+    .hero-image img{
+        height: 400px;
+        width: 400px;
+    }
+    .trusted-logos img{
+        width: 10%;
+    }
+    .hero-buttons button{
+        width: 9rem;
+        padding: 0.8rem 1.6rem;
+        font-size: 0.9rem;
+    }
+    .hero-buttons p{
+        font-size: 0.8rem;
+    }
+    .trusted-head{
+        font-size: 2.5rem;
+    }
+    .trusted-logos{
+        margin: 0 1rem;
+    }
+    .internships h2{
+        font-size: 2.5rem;
+    }
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+        width: 100%;
+    }
+    .card img{
+        height: 200px;
+    }
+    .card h3{
+        font-size: 1.3rem;
+    }
+    .card button{
+        font-size: 0.9rem;
+    }
+    #student-reviews h2{
+        font-size: 2.2rem;
+    }
+    #student-reviews p{
+        font-size: 1rem;
+    }
+    .review-card{
+        margin: 1rem;
+    }
+    .review-card p{
+        font-size: 0.9rem;
+    }
+    .recent-blogs h2{
+        font-size: 2.2rem;
+    }
+    .blog-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-card{
+        width: 100%;
+    }
+    .blog-card img{
+        height: 300px;
+    }
+    .blog-card h3{
+        font-size: 1.3rem;
+    }
+    .blog-card p{
+        font-size: 0.9rem;
+    }
+    .text-content h1{
+        font-size: 2rem;
+    }
+    #conpara{
+        font-size: 0.9rem;
+    }
+    .paragrp{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        margin: 1rem;
+    }
+    .paragrp strong{
+        font-size: 0.9rem;
+    }
+    #fotlogo{
+        width: 60%;
+    }
+    .footer-container{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem 2rem;
+        column-gap:5rem;
+        row-gap: 2rem;
+        h4{
+            font-size: 0.95rem;
+        }
+        a{
+            font-size: 0.9rem;
+        }
+    }
+    .footer-logo{
+        margin-right: 0;
+    }
+    .social-icons img{
+        width: 50%;
+    }
+}
+@media (max-width:930px) {
+    #img__logo{
+        width:auto;
+        height: 1.8rem;
+        margin-right: 0.5rem;
+
+    }
+    .navbar__item a{
+        font-size: 0.8rem;
+    }
+    .navbar__item a:hover{
+        font-size: 0.9rem;
+    }
+    #navbtn{
+        padding: 0.6rem 1.2rem;
+    }
+    .hero-content h1{
+        font-size: 1.8rem;
+    }
+    .hero-logos img{
+        width: 13%;
+    }
+    .hero-buttons button{
+        padding: 0.7rem 0.5rem;
+    }
+    .hero-buttons p{
+        font-weight: 500;
+    }
+    .trusted-head {
+        font-size: 2rem;
+    }
+    .internships h2{
+        font-size: 2rem;
+    }
+    #student-reviews h2{
+        font-size: 2rem;
+    }
+    #headdesc{
+        font-size: 1rem;
+    }
+
 }
