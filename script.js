@@ -23,3 +23,8 @@ const navbarList = document.getElementById('list');
 hamburgerBtn.addEventListener('click', () => {
     navbarList.classList.toggle('show');
 });
+const navbar = document.getElementById("navbar");
+
+hamburgerBtn.addEventListener("click", () => {
+navbar.classList.toggle("open");
+});

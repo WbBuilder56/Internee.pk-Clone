@@ -864,8 +864,13 @@ body {
         display: block;
     }
     .navbar{
-        height:40%;
         overflow: hidden;
+    }
+    .navbar a {
+        display: none;
+    }
+    .navbar.open a {
+        display: block;
     }
     #navbtn{
         padding: 0.5rem 1rem;
@@ -888,8 +893,50 @@ body {
 /* Show the list when the 'show' class is added */
 .navbar__list.show {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 80%;
+}  
 }
-
-    
+.navbar.open {
+    height: 13rem; /* Height when hamburger is clicked */
+}
+@media (max-width:480px) {
+    .trusted-logos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .trusted-logos img{
+        width: 50% !important;
+        margin: 0 2.5rem;
+    }
+ .card-container{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem;
+ }
+ .reviewcon{
+    margin: 1rem;
+ }
+ .content{
+    margin: 1rem;
+ }
+ 
+ .blog-container{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem;
+ }
+ .footer-container{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+ }
+ .emailcol input{
+    padding: 0.5rem 0.5rem;
+ }
+ .emailcol button{
+    padding: 0.5rem 0.5rem;
+    width: fit-content;
+ }
+ .footer-bottom{
+    font-size: 0.8rem;
+ }
 }
